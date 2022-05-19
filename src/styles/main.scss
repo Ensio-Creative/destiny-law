@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;900&display=swap');
+
+@layer components {
+  .container {
+    @apply max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-6xl m-auto mb-20
+  }
+  
+}
