@@ -1,7 +1,7 @@
 
 <template>
   <div class="content absolute w-full">
-    <div class="lg:px-10 px-4 py-8 flex justify-between">
+    <div class="lg:px-10 px-10 py-8 flex justify-between">
       <router-link to="/">
         <img class="w-24 lg:w-32" src="/img/logo.png" alt="" />
       </router-link>
@@ -34,33 +34,13 @@
             text-white
           "
         >
-          <router-link to="/our-work">
-            <div class="link lg:my-0 my-3">Work</div>
+          <router-link v-for="link in links" :key="link.link" :to="link.link" @click="closeNav">
+            <div class="link lg:my-0 my-3">{{link.title}}</div>
           </router-link>
           <div class="lg:mx-20 mx-4 link line">/</div>
-          <router-link to="/about">
-            <div class="link lg:my-0 my-3">About</div>
-          </router-link>
-          <div class="lg:mx-20 mx-4 link line">/</div>
+          
         </div>
-        <div
-          class="
-            normal-case
-            font-black
-            lg:text-8xl
-            text-2xl
-            lg:flex lg:mt-8
-            text-4xl text-white
-          "
-        >
-          <router-link to="/services">
-            <div class="link lg:my-0 my-3">Services</div>
-          </router-link>
-          <div class="lg:mx-10 mx-4 link line">/</div>
-          <router-link to="/contact">
-            <div class="link lg:my-0 my-3">Contact</div>
-          </router-link>
-        </div>
+        
       </div>
       <!-- <div class="line bg-white w-screen lg:mt-40"></div> -->
       <div class="lg:mx-20 mx-8 lg:mt-40 mt-32">
@@ -90,6 +70,7 @@
 </template>
 
 <script setup lang="ts">
+import links from '../static';
 
   const openNav = () => {
     document.getElementById("mySidenav").style.width = "100%";

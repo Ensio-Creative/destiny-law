@@ -12,7 +12,7 @@ const links: AppLink[] = [
   },
   {
     title: 'The Firm',
-    link: '/firm'
+    link: '/the-firm'
   },
   {
     title: 'Practice Areas',

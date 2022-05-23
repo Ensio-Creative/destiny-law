@@ -10,6 +10,21 @@ body {
   }
 }
 
+@font-face{
+  font-family:"recoleta-regular";
+  src: local("recoleta-regular"),
+  url(../assets/recoleta-regulardemo.otf) format("truetype");
+}
+
+$font-reco: 'recoleta-regular';
+$font-inter: 'Inter', sans-serif;
+
+.reco {
+  font-family: $font-reco;
+}
+.inter {
+  font-family: $font-inter;
+}
 
 @layer components {
   .container {
