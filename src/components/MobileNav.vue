@@ -1,0 +1,167 @@
+
+<template>
+  <div class="content absolute w-full">
+    <div class="lg:px-10 px-4 py-8 flex justify-between">
+      <router-link to="/">
+        <img class="w-24 lg:w-32" src="/img/logo.png" alt="" />
+      </router-link>
+      <div @click="openNav" class="flex burger lg:mt-0 mt-2">
+        <div class="uppercase link lg:text-base text-sm -mt-2 mx-3">
+          <img class="w-6 lg:w-32" src="/img/bar.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+      <div class="lg:mx-20 mx-8 flex justify-between">
+        <router-link to="/">
+          <img class="w-24 lg:w-32" src="../static/logo-white.png" alt="" />
+        </router-link>
+        <a
+          href="javascript:void(0)"
+          class="closebtn lg:-mt-10 -mt-6"
+          @click="closeNav"
+          >&times;</a
+        >
+      </div>
+      <div class="lg:mx-20 mx-8 mt-10">
+        <div
+          class="
+            normal-case
+            font-black
+            lg:text-8xl
+            text-4xl text-2xl
+            lg:flex
+            text-white
+          "
+        >
+          <router-link to="/our-work">
+            <div class="link lg:my-0 my-3">Work</div>
+          </router-link>
+          <div class="lg:mx-20 mx-4 link line">/</div>
+          <router-link to="/about">
+            <div class="link lg:my-0 my-3">About</div>
+          </router-link>
+          <div class="lg:mx-20 mx-4 link line">/</div>
+        </div>
+        <div
+          class="
+            normal-case
+            font-black
+            lg:text-8xl
+            text-2xl
+            lg:flex lg:mt-8
+            text-4xl text-white
+          "
+        >
+          <router-link to="/services">
+            <div class="link lg:my-0 my-3">Services</div>
+          </router-link>
+          <div class="lg:mx-10 mx-4 link line">/</div>
+          <router-link to="/contact">
+            <div class="link lg:my-0 my-3">Contact</div>
+          </router-link>
+        </div>
+      </div>
+      <!-- <div class="line bg-white w-screen lg:mt-40"></div> -->
+      <div class="lg:mx-20 mx-8 lg:mt-40 mt-32">
+        <div class="lg:flex justify-between text-white mt-8 text-base">
+          <div class="lg:flex justify-between w-96">
+            <div cl>hello@ensiocreative.com</div>
+            <div class="lg:mt-0 mt-4">+234 703 964 4259</div>
+          </div>
+          <!-- <div class="flex justify-around lg:w-96 lg:mt-0 mt-44">
+            <a href="https://facebook.com/ensiocreative" target="blank">
+              <div>Facebook</div>
+            </a>
+            <a href="https://twitter.com/Ensio_Creative" target="blank">
+              <div>Twitter</div>
+            </a>
+            <a href="https://instagram.com/ensiocreative" target="blank">
+              <div>Instagram</div>
+            </a>
+            <a href="https://linkedin.com/in/ensiocreative" target="blank">
+              <div>Linkedin</div>
+            </a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+
+  const openNav = () => {
+    document.getElementById("mySidenav").style.width = "100%";
+  }
+
+  const closeNav = () => {
+    document.getElementById("mySidenav").style.width = "0%";
+  }
+</script>
+
+<style scoped>
+.link {
+  font-family: "Dela Gothic One" !important;
+}
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #4c32ff; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+/* The navigation menu links */
+/* .sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+} */
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  font-size: 50px;
+  color: white;
+}
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+.line {
+  height: 1px;
+}
+@media (max-width: 500px) {
+  .sidenav {
+    padding-top: 30px;
+  }
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  /* .sidenav a {
+    font-size: 18px;
+  } */
+}
+.burger {
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .line {
+    display: none;
+  }
+}
+</style>
