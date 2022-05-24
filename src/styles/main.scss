@@ -32,11 +32,23 @@ $font-inter: 'Inter', sans-serif;
 
 @layer components {
   .container {
-    @apply max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-6xl m-auto mb-20
+    @apply max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-6xl m-auto
   }
 
   .theme-color {
     @apply text-[#45D279]
   }
   
+}
+
+.desktop {
+  display: none;
+}
+@media (min-width: 950px) {
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
 }

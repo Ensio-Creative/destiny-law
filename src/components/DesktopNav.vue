@@ -3,10 +3,11 @@ import links from '../static'
 </script>
 
 <template>
-  <div class="container">
-    <nav class="bg-black text-white flex justify-between">
-        <div>
-          <img class="w-[93px]" src="/img/logo.png" alt="">
+  <div class="bg-black">
+    <nav class="container text-white">
+        <div class="flex justify-between">
+          <div>
+          <img class="w-[93px] mt-4" src="/img/logo.png" alt="">
         </div>
         <div class="mr-20">
           <ul class="flex">
@@ -14,6 +15,7 @@ import links from '../static'
               <router-link :to="link.link">{{ link.title }}</router-link>
             </li>
           </ul>
+        </div>
         </div>
     </nav>
   </div>

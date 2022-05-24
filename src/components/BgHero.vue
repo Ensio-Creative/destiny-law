@@ -50,7 +50,8 @@ const state = reactive({
 </script>
 
 <template>
-  <div class="bg-black w-full h-[285px] text-center">
+  <div class="h-[80vh]">
+    <div class="bg-black w-full h-[285px] text-center">
     <div class="container pt-20">
       <h2 class="theme-color reco text-[23px] font-semibold">
         {{ contentShown?.heading }}
@@ -62,6 +63,7 @@ const state = reactive({
         <img class="img-border mt-5 h-[230px]" :src="contentShown?.img" alt="">
       </div>
     </div>
+  </div>
   </div>
 </template>
 

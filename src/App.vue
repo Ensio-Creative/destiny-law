@@ -5,13 +5,13 @@
 import BgHeroVue from "./components/BgHero.vue";
 import MobileNavVue from "./components/MobileNav.vue";
 
-// import DesktopNav from './components/DesktopNav.vue'
+import DesktopNav from './components/DesktopNav.vue'
 
 </script>
 
 <template>
-  <!-- <DesktopNav /> -->
-  <MobileNavVue />
+  <DesktopNav class="desktop" />
+  <MobileNavVue class="mobile" />
   <BgHeroVue />
   <router-view/>
 </template>
