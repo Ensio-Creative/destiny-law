@@ -33,36 +33,33 @@ const pageContent: PageContent[] = [
 ] 
 
 const state = reactive({
-  contentShown: {} | undefined
+  contentShown: {}
 })
-
-let contentShown: undefined | PageContent = ref({})
+  const contentShown: any = ref({})
 
   const pageName = computed(() => {
     return router.name
   })
 
   watch(pageName,() => {
-    console.log(router.name)
     const result = pageContent.find(item => item.name === router.name)
-    contentShown = result
-    console.log(contentShown)
+    contentShown.value = result
   })
 
-const img = '/img/logo.png'
+// const img = '/img/logo.png'
 </script>
 
 <template>
   <div class="bg-black w-full h-[285px] text-center">
     <div class="container pt-20">
       <h2 class="theme-color reco text-[23px] font-semibold">
-        {{contentShown?.heading}}
+        {{ contentShown?.heading }}
       </h2>
       <p class="text-white inter font-normal pt-3">
-        {{contentShown?.text}}
-      </p>
+        {{ contentShown?.text }}
+      </p>~
       <div>
-        <img :src="contentShown?.img" alt="">
+        <img class="img-border mt-5 h-[230px]" :src="contentShown?.img" alt="">
       </div>
     </div>
   </div>

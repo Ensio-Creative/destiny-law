@@ -26,6 +26,10 @@ $font-inter: 'Inter', sans-serif;
   font-family: $font-inter;
 }
 
+.img-border {
+  border-radius: 15px;
+}
+
 @layer components {
   .container {
     @apply max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-6xl m-auto mb-20
