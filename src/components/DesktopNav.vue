@@ -6,7 +6,7 @@ import links from '../static'
   <div class="container">
     <nav class="bg-black text-white flex justify-between">
         <div>
-          <img src="/img/logo.png" alt="">
+          <img class="w-[93px]" src="/img/logo.png" alt="">
         </div>
         <div class="mr-20">
           <ul class="flex">

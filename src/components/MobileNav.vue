@@ -14,7 +14,8 @@
     <div id="mySidenav" class="sidenav">
       <div class="lg:mx-20 mx-8 flex justify-between">
         <router-link to="/">
-          <img class="w-24 lg:w-32" src="../static/logo-white.png" alt="" />
+          <!-- <img class="w-24 lg:w-32" src="../static/logo-white.png" alt="" /> -->
+          <img class="w-[93px]" src="/img/logo.png" alt="">
         </router-link>
         <a
           href="javascript:void(0)"
@@ -27,10 +28,10 @@
         <div
           class="
             normal-case
-            font-black
             lg:text-8xl
-            text-4xl text-2xl
+            text-2xl
             lg:flex
+            font-inter
             text-white
           "
         >
@@ -43,11 +44,14 @@
         
       </div>
       <!-- <div class="line bg-white w-screen lg:mt-40"></div> -->
-      <div class="lg:mx-20 mx-8 lg:mt-40 mt-32">
+      <div class="lg:mx-20 mx-8 mt-10">
+        <button class="border border-white text-white p-3 font-inter">
+          Book a Consultation
+        </button>
         <div class="lg:flex justify-between text-white mt-8 text-base">
-          <div class="lg:flex justify-between w-96">
-            <div cl>hello@ensiocreative.com</div>
-            <div class="lg:mt-0 mt-4">+234 703 964 4259</div>
+          <div class="lg:flex justify-between w-96 font-inter">
+            <div>Legal services at it’s best.</div>
+            <!-- <div class="lg:mt-0 mt-4">+234 703 964 4259</div> -->
           </div>
           <!-- <div class="flex justify-around lg:w-96 lg:mt-0 mt-44">
             <a href="https://facebook.com/ensiocreative" target="blank">
@@ -82,9 +86,7 @@ import links from '../static';
 </script>
 
 <style scoped>
-.link {
-  font-family: "Dela Gothic One" !important;
-}
+
 .sidenav {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
@@ -92,7 +94,7 @@ import links from '../static';
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #4c32ff; /* Black*/
+  background-color: #45D279; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
