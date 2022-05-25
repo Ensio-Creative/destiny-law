@@ -57,17 +57,17 @@ const state = reactive({
 </script>
 
 <template>
-  <div :class="[$route.name !== 'Contact-us' ? 'h-[80vh]' : '']">
+  <div :class="[$route.name !== 'Contact-us' ? 'h-[100vh]' : '']">
     <div class="bg-black w-full h-[285px] text-center">
     <div class="container pt-20">
-      <h2 class="theme-color reco text-[23px] font-semibold">
+      <h2 class="theme-color reco text-[23px] font-semibold md:text-[55px]">
         {{ contentShown?.heading }}
       </h2>
-      <p class="text-white inter font-normal pt-3">
+      <p class="text-white inter font-normal pt-3 md:text-[18px] md:pl-72 md:pr-72">
         {{ contentShown?.text }}
       </p>~
       <div v-if="$route.name !== 'Contact-us'">
-        <img class="img-border mt-5 h-[230px]" :src="contentShown?.img" alt="">
+        <img class="img-border mt-5 w-full" :src="contentShown?.img" alt="">
       </div>
     </div>
   </div>
