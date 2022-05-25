@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { watch, computed, reactive, ref } from 'vue'
 import { useRoute } from 'vue-router'
+import Contact from './Contact.vue'
 
 interface PageContent {
   name: string,
@@ -29,6 +30,12 @@ const pageContent: PageContent[] = [
     img: '/img/practice.png',
     heading: 'Practice Areas',
     text: 'We have set a high standard and reputation for excellence across all sectors and practice areas for bespoke client services. '
+  },
+  {
+    name: 'Contact-us',
+    img: '',
+    heading: 'Contact us',
+    text: 'We know what’s at stake for clients and we make ourselves available to achieve their objectives'
   }
 ] 
 
@@ -50,7 +57,7 @@ const state = reactive({
 </script>
 
 <template>
-  <div class="h-[80vh]">
+  <div :class="[$route.name !== 'Contact-us' ? 'h-[80vh]' : '']">
     <div class="bg-black w-full h-[285px] text-center">
     <div class="container pt-20">
       <h2 class="theme-color reco text-[23px] font-semibold">
@@ -59,12 +66,13 @@ const state = reactive({
       <p class="text-white inter font-normal pt-3">
         {{ contentShown?.text }}
       </p>~
-      <div>
+      <div v-if="$route.name !== 'Contact-us'">
         <img class="img-border mt-5 h-[230px]" :src="contentShown?.img" alt="">
       </div>
     </div>
   </div>
   </div>
+      <Contact v-if="$route.name === 'Contact-us'" />
 </template>
 
 

@@ -30,6 +30,18 @@ $font-inter: 'Inter', sans-serif;
   border-radius: 15px;
 }
 
+.form-ele {
+  padding: 10px;
+}
+.form-ele:active {
+}
+::placeholder{
+  color: #000 !important;
+}
+.form-ele:focus {
+  outline: 0px !important;
+}
+
 @layer components {
   .container {
     @apply max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-6xl m-auto

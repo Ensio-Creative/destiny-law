@@ -3,8 +3,7 @@
 </script>
 
 <template>
-  <div>
-    Contact
+  <div class="bg-black text-white">
   </div>
 </template>
 
