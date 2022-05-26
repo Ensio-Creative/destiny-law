@@ -54,10 +54,10 @@ import ConsultVue from './Consult.vue';
             </div>
           </div>
         </div>
-        <div class="border-t border-[#45D279] w-full mt-10" />
+        <div class="border-t border-[#45D279] w-full mt-10 md:hidden" />
         <!-- <hr class="theme-color mt-8"> -->
-        <div class="text-white text-center">
-          <p class="py-10">&copy; {{ new Date().getFullYear() }} Destiny Law Firm.</p>
+        <div class="text-white text-center md:flex justify-between pt-20">
+          <p class="pb-10 md:pb-0">&copy; {{ new Date().getFullYear() }} Destiny Law Firm.</p>
           <p class="">Design & Development: <a href="https://ensiocreative.com/" target="_blank" rel="noopener noreferrer">Ensio Creative</a></p>
         </div>
       </div>

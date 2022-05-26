@@ -24,7 +24,7 @@ import FooterVue from '../components/Footer.vue';
     </div>
     </div>
     
-    <div class="my-36">
+    <div class="my-16">
       <div class="text-center">
         <h3 class="reco font-semibold text-[22px] md:text-[35px] pl-2">Meet the Attorneys</h3>
         <p class="font-inter text-[12px]  md:text-[18px] md:pl-96 md:pr-96">We are a small group of attorneys with proven experience and results. </p>

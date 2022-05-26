@@ -57,20 +57,30 @@ const state = reactive({
 </script>
 
 <template>
-  <div :class="[$route.name !== 'Contact-us' ? 'h-[100vh]' : '']">
-    <div class="bg-black w-full h-[285px] text-center">
-    <div class="container pt-20">
-      <h2 class="theme-color reco text-[23px] font-semibold md:text-[55px]">
-        {{ contentShown?.heading }}
-      </h2>
-      <p class="text-white inter font-normal pt-3 md:text-[18px] md:pl-72 md:pr-72">
-        {{ contentShown?.text }}
-      </p>~
-      <div v-if="$route.name !== 'Contact-us'">
-        <img class="img-border mt-5 w-full" :src="contentShown?.img" alt="">
+  <div :class="[$route.name !== 'Contact-us' ? 'h-[58vh] md:h-[130vh]' : '']">
+    <div class="bg-black w-full h-[285px] md:h-[455px] text-center" v-if="$route.name !== 'Contact-us'">
+      <div class="container pt-20">
+        <h2 class="theme-color reco text-[23px] font-semibold md:text-[55px]">
+          {{ contentShown?.heading }}
+        </h2>
+        <p class="text-white inter font-normal pt-3 md:text-[18px] md:pl-72 md:pr-72">
+          {{ contentShown?.text }}
+        </p>~
+        <div v-if="$route.name !== 'Contact-us'">
+          <img class="img-border mt-5 w-full md:w-[1222px] md:h-[450px]" :src="contentShown?.img" alt="">
+        </div>
       </div>
     </div>
-  </div>
+    <div class="bg-black w-full h-[285px] text-left" v-if="$route.name === 'Contact-us'">
+      <div class="container pt-20">
+        <h2 class="theme-color reco text-[23px] font-semibold md:text-[55px]">
+          {{ contentShown?.heading }}
+        </h2>
+        <p class="text-white inter font-normal pt-3 md:text-[18px] md:pr-[40rem]">
+          {{ contentShown?.text }}
+        </p>
+      </div>
+    </div>
   </div>
       <Contact v-if="$route.name === 'Contact-us'" />
 </template>

@@ -5,7 +5,7 @@ import links from '../static'
 <template>
   <div class="bg-black">
     <nav class="container text-white">
-        <div class="flex justify-between">
+        <div class="flex justify-between md:pt-4">
           <div>
           <img class="w-[93px] mt-4" src="/img/logo.png" alt="">
         </div>
