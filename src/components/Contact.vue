@@ -30,7 +30,7 @@
         <div class="text-white my-10 md:order-1">
           <div>
             <h5 class="theme-color text-[13px] tracking-widest pb-2">ADDRESS</h5>
-            <p class="md:pr-[245px]">
+            <p class="lg:pr-[245px]">
               8 Iriebe Street, D/Line, Port Harcourt,Rivers State, Nigeria
             </p>
           </div>
