@@ -3,7 +3,7 @@ import { watch, computed, reactive, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import Contact from './Contact.vue'
 
-interface PageContent {
+interface IPageContent {
   name: string,
   img: string,
   heading: string,
@@ -12,7 +12,7 @@ interface PageContent {
 
 const router = useRoute()
 
-const pageContent: PageContent[] = [
+const pageContent: IPageContent[] = [
   {
     name: 'Home',
     img: '/img/home.png',
@@ -57,7 +57,7 @@ const state = reactive({
 </script>
 
 <template>
-  <div :class="[$route.name !== 'Contact-us' ? 'h-[58vh] lg:h-[130vh]' : '']">
+  <div :class="[$route.name !== 'Contact-us' ? 'h-[50vh] lg:h-[130vh]' : '']">
     <div class="bg-black w-full h-[285px] lg:h-[455px] text-center" v-if="$route.name !== 'Contact-us'">
       <div class="container pt-20">
         <h2 class="theme-color reco text-[23px] font-semibold lg:text-[55px]">
@@ -67,7 +67,7 @@ const state = reactive({
           {{ contentShown?.text }}
         </p>
         <div v-if="$route.name !== 'Contact-us'">
-          <img class="img-border mt-5 w-full lg:w-[1222px] lg:h-[450px]" :src="contentShown?.img" alt="">
+          <img class="img-border mt-5 w-full lg:w-[920px] lg:h-[450px] m-auto" :src="contentShown?.img" alt="">
         </div>
       </div>
     </div>

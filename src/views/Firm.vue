@@ -4,7 +4,7 @@ import FooterVue from '../components/Footer.vue';
 
 <template>
   <div class="container">
-    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 mt-5">
       <div class="bg-[#F7F7F7] rounded-xl p-5">
       <h4 class="reco font-semibold text-[22px] text-black lg:text-[35px]">Our Story</h4>
       <p class="font-inter pt-3 text-[12px] lg:text-[15px]">
