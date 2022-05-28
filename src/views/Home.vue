@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import FooterVue from '../components/Footer.vue';
-
+import { Carousel, Navigation, Slide } from 'vue3-carousel';
 interface IMinPractices {
   img: string
   title: string
 }
+
 
 const minPractices: IMinPractices[] = [
   {
@@ -20,6 +22,13 @@ const minPractices: IMinPractices[] = [
     title: 'Oil and Gas'
   }
 ]
+
+const settings = {
+      itemsToShow: 1,
+      snapAlign: 'center',
+    }
+
+    const myCarousel = ref(null);
 </script>
 
 <template>
@@ -44,7 +53,7 @@ const minPractices: IMinPractices[] = [
       </div>
     </section>
 
-    <section class="bg-[#F7F7F7] py-36">
+    <section class="bg-[#F7F7F7] py-20 lg:py-36">
       <div class="container">
         <h4 class="text-[12px] font-inter pb-4 lg:text-[16px]">PRACTICE AREAS</h4>
         <h3 class="reco theme-color text-[22px] font-semibold lg:text-[35px] lg:w-[396px]">
@@ -52,13 +61,31 @@ const minPractices: IMinPractices[] = [
           services across a range 
           of sectors 
         </h3>
-        <div class="grid grid-cols-3 gap-4 mt-10">
-          <div class="bg-white p-5 rounded-[15px] h-[497px]" v-for="min in minPractices" :key="min.title">
+        <div class="hidden lg:grid grid-cols-3 gap-4 mt-10 ">
+          <router-link to="/practice-areas" class="bg-white p-5 rounded-[15px] h-[497px]" v-for="min in minPractices" :key="min.title">
             <img class="h-[308px]" :src="`/img/${min.img}`" alt="">
             <h4 class="text-[23px] font-inter py-3 h-[100px]">{{ min.title }}</h4>
             <img class="w-[28px]" src="/img/arrow.svg" alt="">
-          </div>
+          </router-link>
         </div>
+
+      <Carousel :items-to-show="1" :wrap-around="true" ref="myCarousel">
+        <Slide class="lg:hidden mt-10" v-for="min in minPractices" :key="min.title">
+          <router-link to="/practice-areas" class="bg-white p-5 rounded-[15px] h-[348px] ">
+            <img class="h-[248px]" :src="`/img/${min.img}`" alt="">
+            <h4 class="text-[16px] font-inter py-3 h-[50px]">{{ min.title }}</h4>
+            <img class="w-[20px]" src="/img/arrow.svg" alt="">
+          </router-link>
+        </Slide>
+
+        <template #addons>
+          <Navigation />
+        </template>
+      </Carousel>
+      <div class="float-right w-[110px] mt-2 lg:hidden">
+        <button class="bg-[#45D279] w-[30px] h-[30px] p-2 m-2 rounded-full " @click="myCarousel.prev()"><img class="w-[20px] rotate-180" src="/img/arrow.svg" alt=""></button>
+        <button class="bg-[#45D279] w-[30px] h-[30px] p-2 m-2 rounded-full " @click="myCarousel.next()"><img class="w-[20px]" src="/img/arrow.svg" alt=""></button>
+      </div>
       </div>
     </section>
     <FooterVue />
@@ -67,5 +94,7 @@ const minPractices: IMinPractices[] = [
 
 
 <style scoped>
+
+
 
 </style>

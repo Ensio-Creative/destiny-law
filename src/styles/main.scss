@@ -64,3 +64,14 @@ $font-inter: 'Inter', sans-serif;
     display: none;
   }
 }
+
+.carousel__prev {
+  background-color: #45D279 !important;
+  display: none !important;
+}
+.carousel__next {
+  display: none !important;
+}
+.carousel__icon {
+  background-color: #45D279 !important;
+}
