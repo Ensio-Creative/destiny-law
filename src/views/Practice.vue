@@ -52,7 +52,7 @@ const practices: IPractice[] = [
 </script>
 
 <template>  
-  <div class="container mb-10 mt-5">
+  <div class="container mb-10">
     <!-- Desktop -->
     <div class="w-[49rem] m-auto hidden lg:block">
       <div class="flex justify-between" v-for="practice in practices" :key="practice.title">
@@ -70,7 +70,7 @@ const practices: IPractice[] = [
     <!-- Mobile -->
     <div class="w-[14rem] md:w-[30rem] m-auto">
       <div class="border-l border-[#818181] pl-8 pb-5 lg:hidden" v-for="practice in practices" :key="practice.title">
-      <img class="relative left-[-38px] bottom-[1px]" src="/img/round.svg" alt="">
+      <img class="relative left-[-36px] bottom-[1px]" src="/img/round.svg" alt="">
       <img class="w-[204px] h-[100px] md:w-[330px] md:h-[190px]" :src="`/img/${practice.img}`" alt="">
       <!-- <div class="border-[#818181] border-y h-5"/> -->
       <div class="">

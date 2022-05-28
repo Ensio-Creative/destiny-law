@@ -35,7 +35,7 @@
             text-white
           "
         >
-          <router-link v-for="link in links" :key="link.link" :to="link.link" @click="!state.open">
+          <router-link v-for="link in links" :key="link.link" :to="link.link" @click="closeNav">
             <div class="link lg:my-0 my-3">{{link.title}}</div>
           </router-link>
           <div class="lg:mx-20 mx-4 link line">/</div>

@@ -57,7 +57,7 @@ const state = reactive({
 </script>
 
 <template>
-  <div :class="[$route.name !== 'Contact-us' ? 'h-[50vh] lg:h-[130vh]' : '']">
+  <div :class="[$route.name !== 'Contact-us' ? 'h-[65vh] lg:h-[130vh]' : '']">
     <div class="bg-black w-full h-[285px] lg:h-[455px] text-center" v-if="$route.name !== 'Contact-us'">
       <div class="container pt-20">
         <h2 class="theme-color reco text-[23px] font-semibold lg:text-[55px]">
