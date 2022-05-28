@@ -11,7 +11,7 @@
         </div>
       </div>
     </div>
-    <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" :class="[!state.open ? 'sidenav' : 'sidenavOpen']" >
       <div class="lg:mx-20 mx-8 flex justify-between">
         <router-link to="/">
           <!-- <img class="w-24 lg:w-32" src="../static/logo-white.png" alt="" /> -->
@@ -35,7 +35,7 @@
             text-white
           "
         >
-          <router-link v-for="link in links" :key="link.link" :to="link.link" @click="closeNav">
+          <router-link v-for="link in links" :key="link.link" :to="link.link" @click="!state.open">
             <div class="link lg:my-0 my-3">{{link.title}}</div>
           </router-link>
           <div class="lg:mx-20 mx-4 link line">/</div>
@@ -74,14 +74,20 @@
 </template>
 
 <script setup lang="ts">
+import { reactive } from 'vue'
 import links from '../static';
 
+  const state = reactive({
+    open: false
+  })
+
   const openNav = () => {
-    document.getElementById("mySidenav").style.width = "100%";
+    state.open = true
   }
 
   const closeNav = () => {
-    document.getElementById("mySidenav").style.width = "0%";
+    state.open = false
+    console.log('Fired')
   }
 </script>
 
@@ -146,5 +152,59 @@ import links from '../static';
   .line {
     display: none;
   }
+}
+
+/* For open */
+.sidenavOpen {
+  height: 100%; /* 100% Full-height */
+  width: 100%; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #45D279; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+/* The navigation menu links */
+/* .sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+} */
+/* When you mouse over the navigation links, change their color */
+.sidenavOpen a:hover {
+  color: #f1f1f1;
+}
+/* Position and style the close button (top right corner) */
+.sidenavOpen .closebtn {
+  font-size: 50px;
+  color: white;
+}
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+.line {
+  height: 1px;
+}
+@media (max-width: 500px) {
+  .sidenavOpen {
+    padding-top: 30px;
+  }
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenavOpen (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenavOpen {
+    padding-top: 15px;
+  }
+  /* .sidenav a {
+    font-size: 18px;
+  } */
 }
 </style>
