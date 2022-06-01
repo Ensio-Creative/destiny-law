@@ -16,7 +16,7 @@
     <div id="mySidenav" :class="[!state.open ? 'sidenav' : 'sidenavOpen']" >
       <div class="lg:mx-20 mx-8 flex justify-between">
         <router-link to="/">
-          <!-- <img class="w-24 lg:w-32" src="../static/logo-white.png" alt="" /> -->
+          <!-- <img class="w-24 lg:w-32" src="../static/logo-black.png" alt="" /> -->
           <img class="w-[93px]" src="/img/logo.png" alt="">
         </router-link>
         <a
@@ -34,23 +34,24 @@
             text-2xl
             lg:flex
             font-inter
-            text-white
+            text-black
           "
         >
           <router-link v-for="link in links" :key="link.link" :to="link.link" @click="closeNav">
-            <div class="link lg:my-0 my-3">{{link.title}}</div>
+            <div class="link lg:my-0 my-4">{{link.title}}</div>
           </router-link>
-          <div class="lg:mx-20 mx-4 link line">/</div>
+          <div class="pt-2">
+            <router-link to="/contact-us" class="border border-black text-black p-3 font-inter text-[16px]" @click="closeNav">
+          Book a Consultation
+        </router-link>
+          </div>
           
         </div>
         
       </div>
-      <!-- <div class="line bg-white w-screen lg:mt-40"></div> -->
-      <div class="lg:mx-20 mx-8 mt-10">
-        <button class="border border-white text-white p-3 font-inter">
-          Book a Consultation
-        </button>
-        <div class="lg:flex justify-between text-white mt-8 text-base">
+      <!-- <div class="line bg-black w-screen lg:mt-40"></div> -->
+      <div class="lg:mx-20 mx-8 mt-20">
+        <div class="lg:flex justify-between text-black mt-8 text-base">
           <div class="lg:flex justify-between w-96 font-inter">
             <div>Legal services at it’s best.</div>
             <!-- <div class="lg:mt-0 mt-4">+234 703 964 4259</div> -->
@@ -78,6 +79,7 @@
 <script setup  >
 import { reactive } from 'vue'
 import links from '../static';
+links.pop()
 
   const state = reactive({
     open: false
@@ -102,7 +104,7 @@ import links from '../static';
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #45D279; /* Black*/
+  background-color: #fff; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -123,7 +125,7 @@ import links from '../static';
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
   font-size: 50px;
-  color: white;
+  color: #000;
 }
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
@@ -164,7 +166,7 @@ import links from '../static';
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #45D279; /* Black*/
+  background-color: #fff; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -185,7 +187,7 @@ import links from '../static';
 /* Position and style the close button (top right corner) */
 .sidenavOpen .closebtn {
   font-size: 50px;
-  color: white;
+  color: #000;
 }
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {

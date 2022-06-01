@@ -6,7 +6,7 @@ import ConsultVue from './Consult.vue';
   <div>
     <ConsultVue />
     <footer class="bg-black font-inter">
-      <div class="container py-20">
+      <div class="container lg:py-20 py-10">
         <img class="w-[93px] mobile" src="/img/footer-logo.png" alt="">
         <div class="grid grid-cols-2 gap-4 md:grid-cols-4 text-white pt-9">
           <div class="md:col-span-1 desktop">
@@ -56,8 +56,8 @@ import ConsultVue from './Consult.vue';
         </div>
         <div class="border-t border-[#45D279] w-full mt-10 md:hidden" />
         <!-- <hr class="theme-color mt-8"> -->
-        <div class="text-white text-center md:flex justify-between pt-20">
-          <p class="pb-10 md:pb-0 text-[12px]">&copy; {{ new Date().getFullYear() }} Destiny Law Firm.</p>
+        <div class="text-white text-center md:flex justify-between pt-10">
+          <p class="pb-5 md:pb-0 text-[12px]">&copy; {{ new Date().getFullYear() }} Destiny Law Firm.</p>
           <p class=" text-[12px]">Design & Development: <a href="https://ensiocreative.com/" target="_blank" rel="noopener noreferrer">Ensio Creative</a></p>
         </div>
       </div>

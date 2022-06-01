@@ -60,16 +60,18 @@ const practices = [
     </div>
   </section>
 
-  <section>
+  <section class="">
     <div class="container">
-      <p class="font-inter text-[16px] py-6">
+      <p class="font-inter text-[16px] pt-10 lg:pt-24 md:text-[18px] md:w-[586px]">
       We have set a high standard and reputation for excellence across all sectors and practice areas for bespoke client services.
     </p>
     </div>
   </section>
 
-  <div class="container mb-10">
-    <CardVue class="mb-8" v-for="practice in practices" :key="practice.title" :title="practice.title" :img="practice.img" :text="practice.text" />
+  <div class="container my-16 lg:my-24">
+    <div class=" md:grid grid-cols-3 gap-4">
+      <CardVue class="mb-8 " v-for="practice in practices" :key="practice.title" :title="practice.title" :img="practice.img" :text="practice.text" />
+    </div>
   </div>
   <FooterVue />
 </template>

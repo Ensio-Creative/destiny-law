@@ -11,7 +11,7 @@ import Contact from './Contact.vue'
         <h2 class="reco text-[23px] font-semibold lg:text-[55px]">
           Contact us
         </h2>
-        <p class="inter font-normal pt-3 lg:text-[18px] lg:pr-[40rem]">
+        <p class="inter font-normal pt-3 lg:text-[16px] lg:pr-[40rem]">
           We know what’s at stake for clients and we
           make ourselves available to achieve 
           their objectives
