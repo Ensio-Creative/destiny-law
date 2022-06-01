@@ -32,11 +32,12 @@ $font-inter: 'Inter', sans-serif;
 
 .form-ele {
   padding: 10px;
+  background-color: #45D279;
 }
 .form-ele:active {
 }
 ::placeholder{
-  color: #000 !important;
+  color: #fff !important;
 }
 .form-ele:focus {
   outline: 0px !important;
