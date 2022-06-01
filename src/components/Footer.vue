@@ -7,10 +7,10 @@ import ConsultVue from './Consult.vue';
     <ConsultVue />
     <footer class="bg-black font-inter">
       <div class="container py-20">
-        <img class="w-[93px] mobile" src="/img/logo.png" alt="">
+        <img class="w-[93px] mobile" src="/img/footer-logo.png" alt="">
         <div class="grid grid-cols-2 gap-4 md:grid-cols-4 text-white pt-9">
           <div class="md:col-span-1 desktop">
-            <img class="w-[150px]" src="/img/logo.png" alt="">
+            <img class="w-[150px]" src="/img/footer-logo.png" alt="">
           </div>
           <div class="font-inter col-start-1 col-end-3 md:col-span-1">
             <h6 class="font-inter font-bold text-[14px] pb-2">Contact Us</h6>
@@ -57,8 +57,8 @@ import ConsultVue from './Consult.vue';
         <div class="border-t border-[#45D279] w-full mt-10 md:hidden" />
         <!-- <hr class="theme-color mt-8"> -->
         <div class="text-white text-center md:flex justify-between pt-20">
-          <p class="pb-10 md:pb-0">&copy; {{ new Date().getFullYear() }} Destiny Law Firm.</p>
-          <p class="">Design & Development: <a href="https://ensiocreative.com/" target="_blank" rel="noopener noreferrer">Ensio Creative</a></p>
+          <p class="pb-10 md:pb-0 text-[12px]">&copy; {{ new Date().getFullYear() }} Destiny Law Firm.</p>
+          <p class=" text-[12px]">Design & Development: <a href="https://ensiocreative.com/" target="_blank" rel="noopener noreferrer">Ensio Creative</a></p>
         </div>
       </div>
     </footer>

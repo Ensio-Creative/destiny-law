@@ -4,7 +4,6 @@
 import { computed, watch, reactive } from 'vue'
 import { useRoute } from 'vue-router'
 
-import BgHeroVue from "./components/BgHero.vue";
 import MobileNavVue from "./components/MobileNav.vue";
 
 import DesktopNav from './components/DesktopNav.vue'
@@ -33,7 +32,6 @@ watch(pageName,() => {
 <template>
   <DesktopNav class="desktop" />
   <MobileNavVue class="mobile" />
-  <BgHeroVue />
   <router-view/>
 </template>
 

@@ -3,6 +3,14 @@ import FooterVue from '../components/Footer.vue';
 </script>
 
 <template>
+  <section class="overly h-[221px] lg:h-[460px] text-white">
+    <div class="container h-[221px] lg:h-[460px] flex items-center">
+      <div>
+        <h2 class="reco font-semibold text-[27px] lg:text-[55px]">The Firm</h2>
+      </div>
+    </div>
+  </section>
+
   <div class="container">
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 mt-5">
       <div class="bg-[#F7F7F7] rounded-xl p-5">
@@ -63,5 +71,10 @@ import FooterVue from '../components/Footer.vue';
 
 
 <style scoped>
-
+.overly {
+    background: linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),url(/img/firm.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 </style>

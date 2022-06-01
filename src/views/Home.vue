@@ -1,6 +1,7 @@
 <script setup  >
 import { ref } from 'vue'
 import FooterVue from '../components/Footer.vue';
+import CardVue from '../components/Card.vue';
 import { Carousel, Navigation, Slide } from 'vue3-carousel';
 // interface IMinPractices {
 //   img: string
@@ -10,16 +11,19 @@ import { Carousel, Navigation, Slide } from 'vue3-carousel';
 
 const minPractices = [
   {
-    img: 'corprate2.png',
-    title: 'Corporate and Commercial Practice'
+    title: 'Corporate and Commercial Practice',
+    img: 'corprate.svg',
+    text: 'We provide legal advice to business-related matters that cut across a wide range of industries and sectors.'
   },
   {
-    img: 'bar.png',
-    title: 'Litigation and Dispute Resolution'
+    title: 'Litigation and Dispute Resolution',
+    img: 'ligit.svg',
+    text: 'Our team are skilled and ready to get the job done in the area of litigation and dispute resolution.'
   },
   {
-    img: 'oil2.png',
-    title: 'Oil and Gas'
+    title: 'Oil and Gas',
+    img: 'oil.svg',
+    text: 'Our team provides legal advice that benefits our clients from our wealth of knowledge in the oil and gas law.'
   }
 ]
 
@@ -33,6 +37,20 @@ const settings = {
 
 <template>
   <div>
+    <section class="overly h-[383px] lg:h-[700px] text-white">
+      <div class="container h-[383px] lg:h-[700px] flex items-center">
+        <div>
+          <h2 class="reco font-semibold text-[27px] lg:text-[55px] ">Destiny Law Firm</h2>
+
+          <p class="font-inter text-[16px] pt-3 pb-5 lg:text-[22px] lg:w-[751px]"> We are one of the premier law firms in Nigeria with breadth and 
+              depth of experience in providing effective legal services to the 
+              needs of our clients.
+         </p>
+        <button class="bg-[#45D279] rounded-full h-[45px] w-[145px] lg:text-[22px] lg:w-[211px] lg:h-[72px]">Learn more</button> 
+        </div>
+      </div>
+    </section>
+
     <section class="container lg:grid grid-cols-2 gap-4 mt-20 mb-32">
       <div class="col-end-7 col-span-2 lg:order-2 lg:w-[510px]">
         <h4 class="text-[12px] font-inter pb-4 lg:text-[16px]">THE FIRM</h4>
@@ -62,19 +80,15 @@ const settings = {
           of sectors 
         </h3>
         <div class="hidden lg:grid grid-cols-3 gap-4 mt-10 ">
-          <router-link to="/practice-areas" class="bg-white p-5 rounded-[15px] h-[497px]" v-for="min in minPractices" :key="min.title">
-            <img class="h-[308px]" :src="`/img/${min.img}`" alt="">
-            <h4 class="text-[23px] font-inter py-3 h-[100px]">{{ min.title }}</h4>
-            <img class="w-[28px]" src="/img/arrow.svg" alt="">
+          <router-link to="/practice-areas" v-for="min in minPractices" :key="min.title">
+            <CardVue class="h-[325px]" :title="min.title" :img="min.img" :text="min.text" />
           </router-link>
         </div>
 
       <Carousel :items-to-show="1" :wrap-around="true" ref="myCarousel">
         <Slide class="lg:hidden mt-10" v-for="min in minPractices" :key="min.title">
-          <router-link to="/practice-areas" class="bg-white p-5 rounded-[15px] h-[348px] ">
-            <img class="h-[248px]" :src="`/img/${min.img}`" alt="">
-            <h4 class="text-[16px] font-inter py-3 h-[50px]">{{ min.title }}</h4>
-            <img class="w-[20px]" src="/img/arrow.svg" alt="">
+          <router-link to="/practice-areas" class="h-[348px] text-left">
+            <CardVue class="move-text" :title="min.title" :img="min.img" :text="min.text" />
           </router-link>
         </Slide>
 
@@ -95,6 +109,15 @@ const settings = {
 
 <style scoped>
 
+  .overly {
+    background: linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),url(/img/home.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
+  .move-text {
+    text-align: left !important;
+  }
 
 </style>

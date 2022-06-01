@@ -1,10 +1,9 @@
 <script setup  >
-
+import BgHeroVue from '../components/BgHero.vue';
 </script>
 
 <template>
-  <div class="bg-black text-white">
-  </div>
+  <BgHeroVue />
 </template>
 
 

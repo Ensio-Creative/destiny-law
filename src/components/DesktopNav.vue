@@ -3,9 +3,9 @@ import links from '../static'
 </script>
 
 <template>
-  <div class="bg-black">
-    <nav class="container text-white">
-        <div class="flex justify-between md:pt-4">
+  <div class="bg-white">
+    <nav class="container text-black my-2">
+        <div class="flex justify-between md:py-4">
           <div>
           <img class="mt-4 w-[150px]" src="/img/logo.png" alt="">
         </div>
