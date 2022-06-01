@@ -1,14 +1,14 @@
-<script setup lang="ts">
+<script setup  >
 import { ref } from 'vue'
 import FooterVue from '../components/Footer.vue';
 import { Carousel, Navigation, Slide } from 'vue3-carousel';
-interface IMinPractices {
-  img: string
-  title: string
-}
+// interface IMinPractices {
+//   img: string
+//   title: string
+// }
 
 
-const minPractices: IMinPractices[] = [
+const minPractices = [
   {
     img: 'corprate2.png',
     title: 'Corporate and Commercial Practice'

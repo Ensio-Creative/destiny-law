@@ -1,18 +1,18 @@
-<script setup lang="ts">
+<script setup>
 import { watch, computed, reactive, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import Contact from './Contact.vue'
 
-interface IPageContent {
-  name: string,
-  img: string,
-  heading: string,
-  text: string
-}
+// interface IPageContent {
+//   name: string,
+//   img: string,
+//   heading: string,
+//   text: string
+// }
 
 const router = useRoute()
 
-const pageContent: IPageContent[] = [
+const pageContent = [
   {
     name: 'Home',
     img: '/img/home.png',
@@ -42,7 +42,7 @@ const pageContent: IPageContent[] = [
 const state = reactive({
   contentShown: {}
 })
-  const contentShown: any = ref({})
+  const contentShown = ref({})
 
   const pageName = computed(() => {
     return router.name

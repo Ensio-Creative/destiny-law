@@ -1,11 +1,11 @@
 
-interface AppLink {
-  title: string,
-  link: string
-}
+// interface AppLink {
+//   title: string,
+//   link: string
+// }
 
 
-const links: AppLink[] = [
+const links = [
   {
     title: 'Home',
     link: '/'

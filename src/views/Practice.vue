@@ -1,13 +1,13 @@
-<script setup lang="ts">
+<script setup  >
 import FooterVue from '../components/Footer.vue';
 
-interface IPractice {
-  title: string,
-  img: string,
-  text: string,
-}
+// interface IPractice {
+//   title: string,
+//   img: string,
+//   text: string,
+// }
 
-const practices: IPractice[] = [
+const practices = [
   {
     title: 'Corporate and Commercial Practice',
     img: 'corprate.png',
