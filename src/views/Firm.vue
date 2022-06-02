@@ -67,8 +67,8 @@ const attorneys = [
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 pt-10 font-inter">
         <div v-for="attorney in attorneys" :key="attorney.name" class="pt-3 m-auto text-left">
           <img :src="attorney.img" alt="">
-          <p class="text-[12px] font-medium lg:text-[16px] pl-2 pt-3">{{ attorney.name }}</p>
-          <p class="theme-color text-[12px] lg:text-[14px] pl-2">{{ attorney.office }}</p>
+          <p class="text-[15px] font-medium lg:text-[16px] pl-2 pt-3">{{ attorney.name }}</p>
+          <p class="theme-color text-[14px] lg:text-[14px] pl-2">{{ attorney.office }}</p>
         </div>
       </div>
     </div>

@@ -88,7 +88,7 @@ const settings = {
       <Carousel :items-to-show="1" :wrap-around="true" ref="myCarousel">
         <Slide class="lg:hidden mt-10" v-for="min in minPractices" :key="min.title">
           <router-link to="/practice-areas" class="text-left">
-            <CardVue class="move-text mx-32" :title="min.title" :img="min.img" :text="min.text" mx="mx-5" />
+            <CardVue class="move-text mx-32 h-[360px]" :title="min.title" :img="min.img" :text="min.text" mx="mx-5" />
           </router-link>
         </Slide>
 
