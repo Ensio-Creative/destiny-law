@@ -119,5 +119,10 @@ const settings = {
   .move-text {
     text-align: left !important;
   }
+  @media (max-width: 600px) {
+    p{
+      font-size: 15px!important;
+    }
+  }
 
 </style>
