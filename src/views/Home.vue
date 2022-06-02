@@ -53,18 +53,18 @@ const settings = {
 
     <section class="container lg:grid grid-cols-2 gap-4 lg:py-24 py-16">
       <div class="col-end-7 col-span-2 lg:order-2 lg:w-[565px]">
-        <h4 class="text-[12px] font-inter pb-4 lg:text-[14px] lg:mt-[75px]">THE FIRM</h4>
+        <h4 class="text-[14px] font-inter pb-4 lg:text-[14px] lg:mt-[75px]">THE FIRM</h4>
         <h3 class="reco theme-color text-[22px] font-semibold lg:text-[35px] lg:w-[518px]">
           We hold ourselves accountable
           to high standard of service
           delivery and client satisfaction 
         </h3>
 
-        <p class="text-[12px] font-inter pt-4 lg:text-[16px] lg:w-[500px]">
+        <p class="text-[16px] font-inter pt-4 lg:text-[16px] lg:w-[500px]">
           We are one of the outstanding law firms that provides legal services with proven practical legal solutions in achieving our client's objectives.
         </p>
 
-        <router-link class="flex font-inter text-[12px] font-medium pt-5 pb-8 lg:text-[14px] w-40"  to="/the-firm">Learn More <img class="w-[20px] pl-2" src="/img/arrow.svg" alt=""></router-link>
+        <router-link class="flex font-inter text-[16px] font-medium pt-5 pb-8 lg:text-[14px] w-40"  to="/the-firm">Learn More <img class="w-[20px] pl-2" src="/img/arrow.svg" alt=""></router-link>
       </div>
       <div class="lg:w-[503px]">
         <img class="" src="/img/offset.svg" alt="">
@@ -73,7 +73,7 @@ const settings = {
 
     <section class="bg-[#F7F7F7] py-20 lg:py-24">
       <div class="container">
-        <h4 class="text-[12px] font-inter pb-4 lg:text-[16px]">PRACTICE AREAS</h4>
+        <h4 class="text-[14px] font-inter pb-4 lg:text-[16px]">PRACTICE AREAS</h4>
         <h3 class="reco theme-color text-[22px] font-semibold lg:text-[35px] lg:w-[535px]">
           We provide excellent legal 
           services across a range 
@@ -88,7 +88,7 @@ const settings = {
       <Carousel :items-to-show="1" :wrap-around="true" ref="myCarousel">
         <Slide class="lg:hidden mt-10" v-for="min in minPractices" :key="min.title">
           <router-link to="/practice-areas" class="text-left">
-            <CardVue class="move-text" :title="min.title" :img="min.img" :text="min.text" />
+            <CardVue class="move-text mx-32" :title="min.title" :img="min.img" :text="min.text" mx="mx-5" />
           </router-link>
         </Slide>
 

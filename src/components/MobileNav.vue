@@ -1,7 +1,7 @@
 
 <template>
   <div class="content absolute w-full">
-    <div class="lg:px-10 px-10 py-8 flex justify-between">
+    <div class="container py-8 flex justify-between">
       <router-link to="/">
         <img v-if="$route.name !== 'Contact-us'" class="w-24 lg:w-32" src="/img/footer-logo.png" alt="" />
         <img v-else class="w-24 lg:w-32" src="/img/logo.png" alt="" />
