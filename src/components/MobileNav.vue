@@ -1,16 +1,12 @@
 
 <template>
-  <div class="content absolute w-full bg-white">
-    <div class="container py-8 flex justify-between">
+  <div class="content h-[60px] w-full bg-white">
+    <div class="container pt-4 flex justify-between">
       <router-link to="/">
-        <!-- <img v-if="$route.name !== 'Contact-us'" class="w-24 lg:w-32" src="/img/footer-logo.png" alt="" /> -->
         <img class="w-24 lg:w-32" src="/img/logo.png" alt="" />
       </router-link>
-      <div @click="openNav" class="flex burger lg:mt-0 mt-2">
-        <div class="uppercase link lg:text-base text-sm -mt-2 mx-3">
-          <!-- <img v-if="$route.name !== 'Contact-us'" class="w-6 lg:w-32" src="/img/bar.svg" alt="" /> -->
+      <div @click="openNav" class="flex burger lg:mt-0">
           <img class="w-6 lg:w-32" src="/img/bar-black.svg" alt="" />
-        </div>
       </div>
     </div>
     <div id="mySidenav" :class="[!state.open ? 'sidenav' : 'sidenavOpen']" >
